@@ -1,3 +1,11 @@
+import Link from "next/link";
+
 export default function HomePage() {
-  return <h1>HomePage</h1>;
+  return (
+    <l1>
+      <Link href="/news/something-new"> news1 </Link>
+      <Link href="/news/something-new"> news3 </Link>
+      <Link href="/news/something-new"> news2 </Link>
+    </l1>
+  );
 }
