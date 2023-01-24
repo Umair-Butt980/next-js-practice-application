@@ -5,12 +5,7 @@ function NewMeetupPage() {
   const addMeetupHandler = (enteredMeetupData) => {
     console.log(enteredMeetupData);
   };
-  return (
-    <Layout>
-      {" "}
-      <NewMeetupForm onAddMeetup={addMeetupHandler} />
-    </Layout>
-  );
+  return <NewMeetupForm onAddMeetup={addMeetupHandler} />;
 }
 
 export default NewMeetupPage;
