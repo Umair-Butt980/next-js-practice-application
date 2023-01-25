@@ -39,12 +39,22 @@ function HomePage() {
   return <MeetupList meetups={dummy_meetups} />;
 }
 
-export async function getStaticProps() {
-  return {
-    props: {
-      meetups: dummy_meetups,
-    },
-  };
+export async function getServerSideProps(context){
+    let req = context.req;
+    let res = context.res;
+    return{
+        props:{
+            meetups:dummy_meetups
+        }
+    }
 }
+
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       meetups: dummy_meetups,
+//     },
+//   };
+// }
 
 export default HomePage;
